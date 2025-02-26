@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "./test",  
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "outDir": "./dist-test",
+    "strict": false
+  },
+  "include": [
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules" // Si es necesario, excluye node_modules
+  ]
+}
