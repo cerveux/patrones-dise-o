@@ -1,3 +1,7 @@
+// import { COLORS } from "../../helpers/colors";
+import colors from "colors";
+
+colors.setTheme( {} );
 
 class Computer {
   public cpu: string = "CPU - not defined";
@@ -47,3 +51,25 @@ class ComputerBuilder{
   }
 
 }
+
+function main (){
+  const basicComputer: Computer = new ComputerBuilder()
+    .setCPU( "Core 2 Duo" )
+    .setRAM( "4GB" )
+    .setStorage( "128GB" )
+    .build();
+  console.log( "Basic Computer".red );
+  basicComputer.displayConfiguration();
+
+  const ultraComputer: Computer = new ComputerBuilder()
+    .setCPU( "Ryzen 5600" )
+    .setRAM( "32GB" )
+    .setStorage( "2TB" )
+    .setGPU( "RTX 5090" )
+    .build();
+  console.log( "Ultra Computer".green );
+  ultraComputer.displayConfiguration();
+
+}
+
+main();
